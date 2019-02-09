@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context="com.mohammedharis2032.converter_app.Temperature"
+    android:fadingEdge="horizontal"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="300dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        android:paddingLeft="15dp"
+        android:paddingTop="10dp"
+        android:shadowColor="@android:color/black"
+        android:shadowDx="4"
+        android:shadowDy="4"
+        android:text="Volume"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@android:color/black"
+        android:textSize="40sp"
+        android:typeface="serif"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textAlignment="center"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Converter"
+        android:textColor="@android:color/black"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_below="@+id/tv1"
+        android:textAlignment="center"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/textView" />
+
+    <EditText
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:inputType="numberDecimal"
+        android:textAlignment="center"
+        android:id="@+id/volumeValue"
+        android:layout_below="@+id/resetBtn"
+        android:layout_alignStart="@+id/tv1"
+        android:layout_marginStart="25dp" />
+
+    <EditText
+        android:id="@+id/result"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:inputType="numberDecimal"
+        android:textAlignment="center"
+        android:clickable="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:cursorVisible="false"
+        android:layout_below="@+id/resetBtn"
+        android:layout_toEndOf="@+id/textView" />
+
+    <Button
+        android:text="Reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:layout_marginLeft="250dp"
+        android:id="@+id/resetBtn"
+        android:layout_marginEnd="20dp"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentEnd="true" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="40dp"
+        android:id="@+id/radioGroup"
+        android:layout_below="@+id/volumeValue"
+        android:layout_alignParentStart="true">
+
+        <RadioButton
+            android:text="litre to US Gallon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cTofRadio"/>
+
+        <RadioButton
+            android:id="@+id/fTocRadio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="US Gallon to Litre" />
+    </RadioGroup>
+
+    <TextView
+        android:text=""
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_red_light"
+        android:id="@+id/errorTextView"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:text="CONVERT"
+        android:textSize="70px"
+        android:background="@android:color/holo_blue_dark"
+        android:layout_width="200dp"
+        android:layout_height="70dp"
+        android:id="@+id/convertBtn"
+        android:layout_below="@+id/radioGroup"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="21dp" />
+
+</RelativeLayout>
